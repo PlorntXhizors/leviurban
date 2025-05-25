@@ -67,9 +67,9 @@ export default function Navbar() {
             <Link
               key={index}
               href={item.href}
-              className={`px-3 py-1.5 rounded-full transition-all duration-300 font-medium text-white hover:bg-primary/80 hover:text-white ${
+              className={`px-3 py-1.5 rounded-full transition-all duration-300 font-medium hover:bg-primary/80 hover:text-white hover:scale-105 transform ${
                 isScrolled ? "text-gray-800 hover:text-white" : "text-white drop-shadow-sm"
-              } hover:scale-105 transform`}
+              }`}
             >
               {item.label}
             </Link>
@@ -84,7 +84,11 @@ export default function Navbar() {
               asChild
               size="sm"
               variant="outline"
-              className="rounded-full border-2 border-primary bg-transparent text-white hover:bg-primary/90 hover:text-white font-medium shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 transform text-xs py-1"
+              className={`rounded-full border-2 font-medium shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 transform text-xs py-1 ${
+                isScrolled
+                  ? "border-primary bg-transparent text-gray-800 hover:bg-primary hover:text-white"
+                  : "border-primary bg-transparent text-white hover:bg-primary/90 hover:text-white"
+              }`}
             >
               <Link href="https://airbnb.com/h/levi-urban">{t("nav.bookApt1")}</Link>
             </Button>
