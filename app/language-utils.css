@@ -1,0 +1,49 @@
+/* RTL/LTR transition utilities */
+html {
+  transition: all 0.3s ease;
+}
+
+html.rtl .rtl-flip {
+  transform: scaleX(-1);
+}
+
+/* Fix for spacing in RTL/LTR modes */
+html.rtl .space-x-1 > * + * {
+  margin-right: 0.25rem;
+  margin-left: 0;
+}
+
+html.rtl .space-x-2 > * + * {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+html.rtl .space-x-3 > * + * {
+  margin-right: 0.75rem;
+  margin-left: 0;
+}
+
+html.rtl .space-x-4 > * + * {
+  margin-right: 1rem;
+  margin-left: 0;
+}
+
+html.ltr .space-x-1 > * + * {
+  margin-left: 0.25rem;
+  margin-right: 0;
+}
+
+html.ltr .space-x-2 > * + * {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+html.ltr .space-x-3 > * + * {
+  margin-left: 0.75rem;
+  margin-right: 0;
+}
+
+html.ltr .space-x-4 > * + * {
+  margin-left: 1rem;
+  margin-right: 0;
+}
