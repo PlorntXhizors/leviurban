@@ -1,7 +1,7 @@
 "use client"
 
 import Head from "next/head"
-import { useRouter } from "next/router"
+import { usePathname } from "next/navigation"
 
 interface SEOProps {
   title?: string
@@ -66,11 +66,11 @@ export default function SEO({
   noindex = false,
   nofollow = false,
 }: SEOProps) {
-  const router = useRouter()
+  const pathname = usePathname()
 
   // Construct full URL for current page
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://leviurban.com"
-  const currentUrl = `${baseUrl}${router.asPath}`
+  const currentUrl = `${baseUrl}${pathname || ""}`
 
   // Use provided values or fall back to defaults
   const seoTitle = title || defaultSEO.title
