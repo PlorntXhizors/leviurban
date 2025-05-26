@@ -24,8 +24,28 @@ export default function HomePage() {
   })
 
   const apartmentImages = {
-    apt1: ["/levi-urban-1.png", "/cozy-modern-living-room.png", "/modern-studio-apartment.png"],
-    apt2: ["/levi-urban-2.png", "/modern-studio-apartment.png", "/cozy-modern-living-room.png"],
+    apt1: [
+      "/levi-urban-1-living.jpg",
+      "/levi-urban-1-bedroom.jpg",
+      "/levi-urban-1-kitchen.jpg",
+      "/levi-urban-1-bathroom.jpg",
+      "/levi-urban-1-bar.jpg",
+      "/levi-urban-1-kitchen2.jpg",
+      "/levi-urban-1-entrance.jpg",
+      "/levi-urban-1-bathroom2.jpg",
+      "/levi-urban-1-terrace.jpg",
+      "/levi-urban-1-patio.jpg",
+    ],
+    apt2: [
+      "/levi-urban-2-kitchen.jpg",
+      "/levi-urban-2-bathroom.jpg",
+      "/levi-urban-2-kitchen2.jpg",
+      "/levi-urban-2-bedroom.jpg",
+      "/levi-urban-2-living.jpg",
+      "/levi-urban-2-entrance.jpg",
+      "/levi-urban-2-patio.jpg",
+      "/levi-urban-2-terrace.jpg",
+    ],
   }
 
   const nextImage = (apartment) => {
