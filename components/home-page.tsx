@@ -81,8 +81,8 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0">
           {!imagesLoaded.hero && <div className="absolute inset-0 bg-gray-300 animate-pulse"></div>}
           <Image
-            src="/haifa-cityscape.png"
-            alt="Haifa City View"
+            src="/haifa-cable-car-hero.jpg"
+            alt="Haifa Cable Car and Mediterranean View"
             fill
             priority
             className={`object-cover transition-opacity duration-300 ${imagesLoaded.hero ? "opacity-100" : "opacity-0"}`}
