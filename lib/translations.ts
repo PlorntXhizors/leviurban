@@ -274,8 +274,8 @@ const translations: Record<TranslationKey, Record<Language, string>> = {
     en: "Phone/WhatsApp",
   },
   "contact.phone.value": {
-    he: "+972 50 000 0000",
-    en: "+972 50 000 0000",
+    he: "+97254-9966-949",
+    en: "+97254-9966-949",
   },
   "contact.email.title": {
     he: "אימייל",
