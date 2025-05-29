@@ -81,8 +81,8 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0">
           {!imagesLoaded.hero && <div className="absolute inset-0 bg-gray-300 animate-pulse"></div>}
           <Image
-            src="/haifa-cable-car-hero.jpg"
-            alt="Haifa Cable Car and Mediterranean View"
+            src="/bahai-gardens-haifa.jpg"
+            alt="הגנים הבהאיים בחיפה"
             fill
             priority
             className={`object-cover transition-opacity duration-300 ${imagesLoaded.hero ? "opacity-100" : "opacity-0"}`}
@@ -159,7 +159,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold mb-2">{t("apartments.apt1.title")}</h3>
+                <h3 className="text-2xl font-bold mb-2">דינה ימין</h3>
                 <p className="text-gray-700 mb-4">{t("apartments.apt1.description")}</p>
                 <ul className="grid grid-cols-2 gap-x-4 gap-y-2 mb-6">
                   <li className="flex items-center gap-2">
@@ -234,7 +234,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold mb-2">{t("apartments.apt2.title")}</h3>
+                <h3 className="text-2xl font-bold mb-2">דירה שמאל</h3>
                 <p className="text-gray-700 mb-4">{t("apartments.apt2.description")}</p>
                 <ul className="grid grid-cols-2 gap-x-4 gap-y-2 mb-6">
                   <li className="flex items-center gap-2">
@@ -321,8 +321,8 @@ export default function HomePage() {
             <div className="order-2 md:order-1 relative h-80 md:h-full min-h-[400px] rounded-xl overflow-hidden card-shadow">
               {!imagesLoaded.wineBar && <div className="absolute inset-0 bg-gray-300 animate-pulse"></div>}
               <Image
-                src="/wine-bar.png"
-                alt="בר היין של Levi Urban"
+                src="/courtyard-fountain.jpg"
+                alt="חצר פנימית עם מזרקה של Levi Urban"
                 fill
                 className={`object-cover transition-opacity duration-300 ${imagesLoaded.wineBar ? "opacity-100" : "opacity-0"}`}
                 onLoad={() => handleImageLoad("wineBar")}
