@@ -40,8 +40,8 @@ export default function Navbar() {
           <div className="relative h-16 w-48 md:h-20 md:w-72">
             {!logoLoaded && <div className="absolute inset-0 bg-gray-300 animate-pulse rounded-md"></div>}
             <Image
-              src="/levi-urban-home-logo.png"
-              alt="Levi Urban Home"
+              src="/levi-urban-home-logo-new.png"
+              alt="Levi Urban Home - Authentic Haifa Nights"
               fill
               className={`object-contain drop-shadow-md transition-opacity duration-300 ${logoLoaded ? "opacity-100" : "opacity-0"}`}
               priority
