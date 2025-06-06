@@ -63,6 +63,20 @@ export type TranslationKey =
   | "contact.form.message"
   | "contact.form.submit"
   | "footer.rights"
+  | "accessibility.skipToMain"
+  | "accessibility.skipToNav"
+  | "accessibility.toolbar"
+  | "accessibility.fontSize"
+  | "accessibility.contrast"
+  | "accessibility.reset"
+  | "accessibility.openToolbar"
+  | "accessibility.closeToolbar"
+  | "accessibility.increaseFont"
+  | "accessibility.decreaseFont"
+  | "accessibility.imageCarousel"
+  | "accessibility.previousImage"
+  | "accessibility.nextImage"
+  | "accessibility.imageIndicator"
 
 const translations: Record<TranslationKey, Record<Language, string>> = {
   "hero.title": {
@@ -312,6 +326,62 @@ const translations: Record<TranslationKey, Record<Language, string>> = {
   "footer.rights": {
     he: "כל הזכויות שמורות.",
     en: "All rights reserved.",
+  },
+  "accessibility.skipToMain": {
+    he: "דלג לתוכן הראשי",
+    en: "Skip to main content",
+  },
+  "accessibility.skipToNav": {
+    he: "דלג לניווט",
+    en: "Skip to navigation",
+  },
+  "accessibility.toolbar": {
+    he: "כלי נגישות",
+    en: "Accessibility Tools",
+  },
+  "accessibility.fontSize": {
+    he: "גודל גופן",
+    en: "Font Size",
+  },
+  "accessibility.contrast": {
+    he: "ניגודיות גבוהה",
+    en: "High Contrast",
+  },
+  "accessibility.reset": {
+    he: "איפוס",
+    en: "Reset",
+  },
+  "accessibility.openToolbar": {
+    he: "פתח כלי נגישות",
+    en: "Open accessibility toolbar",
+  },
+  "accessibility.closeToolbar": {
+    he: "סגור כלי נגישות",
+    en: "Close accessibility toolbar",
+  },
+  "accessibility.increaseFont": {
+    he: "הגדל גופן",
+    en: "Increase font size",
+  },
+  "accessibility.decreaseFont": {
+    he: "הקטן גופן",
+    en: "Decrease font size",
+  },
+  "accessibility.imageCarousel": {
+    he: "קרוסלת תמונות",
+    en: "Image carousel",
+  },
+  "accessibility.previousImage": {
+    he: "תמונה קודמת",
+    en: "Previous image",
+  },
+  "accessibility.nextImage": {
+    he: "תמונה הבאה",
+    en: "Next image",
+  },
+  "accessibility.imageIndicator": {
+    he: "מחוון תמונה",
+    en: "Image indicator",
   },
 }
 
