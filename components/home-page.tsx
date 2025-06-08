@@ -21,6 +21,7 @@ export default function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState({
     apt1: 0,
     apt2: 0,
+    wineBar: 0,
   })
 
   const apartmentImages = {
@@ -48,18 +49,51 @@ export default function HomePage() {
     ],
   }
 
+  const wineBarImages = [
+    {
+      src: "/wine-bar-courtyard.jpeg",
+      alt: "חצר בר היין בערב עם תאורה חמה, כיסאות עץ וכוסות יין על השולחן",
+    },
+    {
+      src: "/wine-bottles-collection.jpeg",
+      alt: "אוסף בקבוקי יין מגוונים עם צמחי תבלין ירוקים",
+    },
+    {
+      src: "/wine-glasses-setup.jpeg",
+      alt: "כוסות יין תלויות ומדף יינות מקצועי בבר",
+    },
+    {
+      src: "/wine-cheese-pairing.jpeg",
+      alt: "בקבוק יין פיקפול דה פינה עם גבינות על קרש עץ",
+    },
+  ]
+
   const nextImage = (apartment) => {
-    setCurrentImageIndex((prev) => ({
-      ...prev,
-      [apartment]: (prev[apartment] + 1) % apartmentImages[apartment].length,
-    }))
+    if (apartment === "wineBar") {
+      setCurrentImageIndex((prev) => ({
+        ...prev,
+        [apartment]: (prev[apartment] + 1) % wineBarImages.length,
+      }))
+    } else {
+      setCurrentImageIndex((prev) => ({
+        ...prev,
+        [apartment]: (prev[apartment] + 1) % apartmentImages[apartment].length,
+      }))
+    }
   }
 
   const prevImage = (apartment) => {
-    setCurrentImageIndex((prev) => ({
-      ...prev,
-      [apartment]: prev[apartment] === 0 ? apartmentImages[apartment].length - 1 : prev[apartment] - 1,
-    }))
+    if (apartment === "wineBar") {
+      setCurrentImageIndex((prev) => ({
+        ...prev,
+        [apartment]: prev[apartment] === 0 ? wineBarImages.length - 1 : prev[apartment] - 1,
+      }))
+    } else {
+      setCurrentImageIndex((prev) => ({
+        ...prev,
+        [apartment]: prev[apartment] === 0 ? apartmentImages[apartment].length - 1 : prev[apartment] - 1,
+      }))
+    }
   }
 
   const handleImageLoad = (imageName) => {
@@ -347,8 +381,8 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gray-300 animate-pulse" aria-hidden="true"></div>
               )}
               <Image
-                src="/haifa-hadar-street.png"
-                alt="רחוב בשכונת הדר בחיפה - מיקום Levi Urban"
+                src="/haifa-hadar-street-new.jpeg"
+                alt="רחוב בשכונת הדר בחיפה עם תחנת אוטובוס ושלט הגבלת מהירות - מיקום Levi Urban"
                 fill
                 className={`object-cover transition-opacity duration-300 ${imagesLoaded.location ? "opacity-100" : "opacity-0"}`}
                 onLoad={() => handleImageLoad("location")}
@@ -368,17 +402,59 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="order-2 md:order-1 relative h-80 md:h-full min-h-[400px] rounded-xl overflow-hidden card-shadow">
-              {!imagesLoaded.wineBar && (
-                <div className="absolute inset-0 bg-gray-300 animate-pulse" aria-hidden="true"></div>
-              )}
-              <Image
-                src="/courtyard-fountain.jpg"
-                alt="חצר פנימית עם מזרקה אבן וכיסאות עץ - אזור בר היין של Levi Urban"
-                fill
-                className={`object-cover transition-opacity duration-300 ${imagesLoaded.wineBar ? "opacity-100" : "opacity-0"}`}
-                onLoad={() => handleImageLoad("wineBar")}
-                onError={(e) => handleImageError(e, "wineBar")}
-              />
+              <div
+                className="relative h-full group"
+                role="img"
+                aria-label={`${t("accessibility.imageCarousel")} - בר היין`}
+              >
+                {!imagesLoaded.wineBar && (
+                  <div className="absolute inset-0 bg-gray-300 animate-pulse" aria-hidden="true"></div>
+                )}
+                <Image
+                  src={wineBarImages[currentImageIndex.wineBar]?.src || "/placeholder.svg"}
+                  alt={wineBarImages[currentImageIndex.wineBar]?.alt || "בר היין"}
+                  fill
+                  className={`object-cover transition-opacity duration-300 ${imagesLoaded.wineBar ? "opacity-100" : "opacity-0"}`}
+                  onLoad={() => handleImageLoad("wineBar")}
+                  onError={(e) => handleImageError(e, "wineBar")}
+                />
+
+                {/* Navigation buttons */}
+                <button
+                  onClick={() => prevImage("wineBar")}
+                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 focus:outline-none focus:ring-2 focus:ring-white"
+                  aria-label={t("accessibility.previousImage")}
+                >
+                  ←
+                </button>
+                <button
+                  onClick={() => nextImage("wineBar")}
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 focus:outline-none focus:ring-2 focus:ring-white"
+                  aria-label={t("accessibility.nextImage")}
+                >
+                  →
+                </button>
+
+                {/* Image indicators */}
+                <div
+                  className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2"
+                  role="tablist"
+                  aria-label={t("accessibility.imageIndicator")}
+                >
+                  {wineBarImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex((prev) => ({ ...prev, wineBar: index }))}
+                      className={`w-2 h-2 rounded-full transition-colors focus:outline-none focus:ring-1 focus:ring-white ${
+                        index === currentImageIndex.wineBar ? "bg-white" : "bg-white/50"
+                      }`}
+                      role="tab"
+                      aria-selected={index === currentImageIndex.wineBar}
+                      aria-label={`תמונה ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
             <div className="order-1 md:order-2">
               <ul className="space-y-6" role="list">
