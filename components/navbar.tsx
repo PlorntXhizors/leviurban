@@ -4,7 +4,6 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { LanguageToggle } from "@/components/language-toggle"
 import { useTranslation } from "@/hooks/use-translation"
 
@@ -83,32 +82,6 @@ export default function Navbar() {
           <div className="px-2">
             <LanguageToggle />
           </div>
-
-          <div className="flex space-x-3 rtl:space-x-reverse ml-2">
-            <Button
-              asChild
-              size="sm"
-              variant="outline"
-              className={`rounded-full border-2 font-medium shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 transform text-xs py-1 focus:outline-none focus:ring-2 focus:ring-primary ${
-                isScrolled
-                  ? "border-primary bg-transparent text-gray-800 hover:bg-primary hover:text-white"
-                  : "border-primary bg-transparent text-white hover:bg-primary/90 hover:text-white"
-              }`}
-            >
-              <Link href="https://airbnb.com/h/levi-urban" aria-label={`${t("nav.bookApt1")} - דירה ימין`}>
-                {t("nav.bookApt1")}
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="sm"
-              className="rounded-full bg-primary hover:bg-primary/90 text-white font-medium shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 transform text-xs py-1 focus:outline-none focus:ring-2 focus:ring-white"
-            >
-              <Link href="https://airbnb.com/h/levi-urban2" aria-label={`${t("nav.bookApt2")} - דירה שמאל`}>
-                {t("nav.bookApt2")}
-              </Link>
-            </Button>
-          </div>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -152,34 +125,6 @@ export default function Navbar() {
 
             <div className="flex items-center px-4 py-2">
               <LanguageToggle />
-            </div>
-
-            <div className="flex flex-col space-y-2 p-2">
-              <Button
-                asChild
-                variant="outline"
-                className="w-full border-2 border-white bg-transparent text-white hover:bg-white/20 font-medium focus:outline-none focus:ring-2 focus:ring-white"
-              >
-                <Link
-                  href="https://airbnb.com/h/levi-urban"
-                  onClick={() => setIsOpen(false)}
-                  aria-label={`${t("nav.bookApt1")} - דירה ימין`}
-                >
-                  {t("nav.bookApt1")}
-                </Link>
-              </Button>
-              <Button
-                asChild
-                className="w-full bg-white text-primary hover:bg-white/90 font-medium focus:outline-none focus:ring-2 focus:ring-primary"
-              >
-                <Link
-                  href="https://airbnb.com/h/levi-urban2"
-                  onClick={() => setIsOpen(false)}
-                  aria-label={`${t("nav.bookApt2")} - דירה שמאל`}
-                >
-                  {t("nav.bookApt2")}
-                </Link>
-              </Button>
             </div>
           </div>
         </div>
