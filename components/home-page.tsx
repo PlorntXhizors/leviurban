@@ -149,6 +149,81 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Levi Urban Weekend Package Section */}
+      <section className="section-padding bg-gradient-to-br from-blue-50 to-blue-100" aria-labelledby="weekend-title">
+        <div className="container mx-auto container-padding">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 id="weekend-title" className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
+                Levi Urban Weekend
+              </h2>
+              <p className="text-xl md:text-2xl text-blue-700 font-medium">חבילת סופ"ש זוגית אורבנית בלב חיפה</p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 md:p-12 card-shadow">
+              <div className="prose max-w-none text-lg leading-relaxed">
+                <p className="text-xl font-medium text-gray-800 mb-6">
+                  ברוכים הבאים ל־Levi Urban – חוויית סוף שבוע אינטימית, עירונית ומוקפדת בלב שכונת הדר המתחדשת.
+                </p>
+
+                <p className="text-gray-700 mb-8">
+                  בכל סופ"ש אנחנו פותחים את הדלת רק לשני זוגות – ומציעים חבילת אירוח ייחודית שמחברת בין עיצוב, יין, מגע,
+                  קולינריה ואווירה מקומית אמיתית.
+                </p>
+
+                <div className="bg-blue-50 rounded-xl p-6 mb-8">
+                  <h3 className="text-2xl font-bold text-blue-900 mb-6">מה מחכה לכם?</h3>
+                  <ul className="space-y-4" role="list">
+                    <li className="flex items-start gap-3">
+                      <div className="mt-1 text-blue-600" aria-hidden="true">
+                        ✨
+                      </div>
+                      <span className="text-gray-700">יחידת אירוח מעוצבת עם פטיו פרטי ופרטיות מלאה</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="mt-1 text-blue-600" aria-hidden="true">
+                        🍷
+                      </div>
+                      <span className="text-gray-700">בר יין אינטימי בחצר פנימית – כולל טעימות ובקבוק זוגי</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="mt-1 text-blue-600" aria-hidden="true">
+                        💆‍♀️
+                      </div>
+                      <span className="text-gray-700">עיסוי זוגי בטרסה פתוחה עם מטפל מוסמך</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="mt-1 text-blue-600" aria-hidden="true">
+                        🍽️
+                      </div>
+                      <span className="text-gray-700">ארוחת שף במסעדת נמל 24 – חוויה קולינרית מהשורה הראשונה</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="mt-1 text-blue-600" aria-hidden="true">
+                        ☕
+                      </div>
+                      <span className="text-gray-700">ובוקר רגוע בקפה־מסעדה עם אופי אמנותי ברחוב מסדה</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="text-center">
+                  <Button
+                    asChild
+                    size="lg"
+                    className="rounded-full px-8 py-4 text-lg font-semibold bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    <Link href="#contact" aria-label="צור קשר לפרטים על חבילת הסופ״ש">
+                      לפרטים ותיאום - צרו קשר
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Apartments Section */}
       <section id="apartments" className="section-padding bg-gray-50" aria-labelledby="apartments-title">
         <div className="container mx-auto container-padding">
@@ -700,7 +775,7 @@ export default function HomePage() {
           <Button
             asChild
             variant="outline"
-            className="flex-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+            className="flex-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary bg-transparent"
           >
             <Link href="https://airbnb.com/h/levi-urban2" aria-label={`${t("nav.bookApt2")} - דירה שמאל`}>
               {t("nav.bookApt2")}

@@ -37,7 +37,7 @@ export default function RootLayout({
     <html lang="he" dir="rtl" className={heebo.variable}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#f97316" />
+        <meta name="theme-color" content="#3b82f6" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
