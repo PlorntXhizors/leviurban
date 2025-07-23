@@ -74,10 +74,20 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-200 mt-10 pt-6 text-center text-gray-500 text-sm">
-          <p>
-            © {new Date().getFullYear()} Levi Urban. {t("footer.rights")}
-          </p>
+        <div className="border-t border-gray-200 mt-10 pt-6">
+          <div className="flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+            <p className="mb-4 md:mb-0">
+              © {new Date().getFullYear()} Levi Urban. {t("footer.rights")}
+            </p>
+            <div className="flex space-x-4 rtl:space-x-reverse">
+              <Link
+                href="/privacy-policy"
+                className="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded"
+              >
+                מדיניות החברה
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

@@ -150,17 +150,29 @@ export default function HomePage() {
       </section>
 
       {/* Levi Urban Weekend Package Section */}
-      <section className="section-padding bg-gradient-to-br from-blue-50 to-blue-100" aria-labelledby="weekend-title">
-        <div className="container mx-auto container-padding">
+      <section className="section-padding relative" aria-labelledby="weekend-title">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/haifa-cable-car-weekend.jpg"
+            alt="נוף חיפה עם רכבל כתום מעל העיר והים התיכון ברקע"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
+        </div>
+
+        <div className="container mx-auto container-padding relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 id="weekend-title" className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
+              <h2 id="weekend-title" className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
                 Levi Urban Weekend
               </h2>
-              <p className="text-xl md:text-2xl text-blue-700 font-medium">חבילת סופ"ש זוגית אורבנית בלב חיפה</p>
+              <p className="text-xl md:text-2xl text-white font-medium drop-shadow-md">
+                חבילת סופ"ש זוגית אורבנית בלב חיפה
+              </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 md:p-12 card-shadow">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-12 card-shadow">
               <div className="prose max-w-none text-lg leading-relaxed">
                 <p className="text-xl font-medium text-gray-800 mb-6">
                   ברוכים הבאים ל־Levi Urban – חוויית סוף שבוע אינטימית, עירונית ומוקפדת בלב שכונת הדר המתחדשת.
