@@ -112,6 +112,7 @@ export default function Navbar() {
               { href: "#extras", label: t("nav.wineBar") },
               { href: "#reviews", label: t("nav.reviews") },
               { href: "#contact", label: t("nav.contact") },
+              { href: "/privacy-policy", label: "מדיניות החברה" },
             ].map((item, index) => (
               <Link
                 key={index}
