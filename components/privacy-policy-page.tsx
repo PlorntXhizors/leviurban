@@ -110,7 +110,7 @@ export default function PrivacyPolicyPage() {
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">ברוכים הבאים ל-Levi Urban</h2>
                   <p className="text-lg text-gray-700 leading-relaxed mb-4">
                     אנו מציעים חווית אירוח ייחודית, נוחה ובטוחה בלב שכונת הדר המתחדשת בחיפה. הדירות שלנו מעוצבות בקפידה
-                    ומצוידות بكل הנוחויות הדרושות לשהות מושלמת.
+                    ומצוידות בכל הנוחויות הדרושות לשהות מושלמת.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
                     כל ההזמנות מתבצעות דרך פלטפורמת Airbnb המובילה, המבטיחה לכם אבטחה, שקיפות ושירות מקצועי. להלן תנאי
@@ -189,7 +189,7 @@ export default function PrivacyPolicyPage() {
                       </div>
                       <h3 className="text-xl font-semibold text-green-800">צ'ק אין</h3>
                     </div>
-                    <p className="text-2xl font-bold text-green-700 mb-2">15:00 - 22:00</p>
+                    <p className="text-2xl font-bold text-green-700 mb-2">15:00 - 19:00</p>
                     <p className="text-green-600 text-sm">הגעה מאוחרת יותר תתואם מראש</p>
                   </div>
 
