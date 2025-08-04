@@ -21,8 +21,6 @@ import {
   Wifi,
   Car,
   Coffee,
-  Camera,
-  Volume2,
   Mail,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -328,55 +326,149 @@ export default function PrivacyPolicyPage() {
                   <h2 className="text-3xl font-bold text-gray-900">כללי התנהגות</h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-4">
-                    <div className="bg-red-50 rounded-xl p-6 border border-red-200">
-                      <div className="flex items-center gap-3 mb-4">
-                        <Ban className="text-red-600" size={20} />
-                        <h3 className="text-xl font-semibold text-red-800">עישון</h3>
-                      </div>
-                      <p className="text-red-700 mb-3">עישון אסור לחלוטין בתוך הדירה. ניתן לעשן במרפסת או בחצר בלבד.</p>
-                      <div className="bg-red-100 rounded-lg p-3">
-                        <p className="text-sm text-red-800 font-medium">⚠️ עישון בדירה יגרור קנס של 500 ש"ח</p>
-                      </div>
-                    </div>
+                <div className="bg-blue-50 rounded-xl p-6 mb-8 border-l-4 border-blue-400">
+                  <p className="text-lg text-blue-800 leading-relaxed">
+                    להלן כמה כללים בסיסיים כדי לוודא שתשמרו על הדירה נהדרת כפי שקיבלתם אותה, ותיהנו מחווית אירוח נעימה
+                    ובטוחה.
+                  </p>
+                </div>
 
-                    <div className="bg-orange-50 rounded-xl p-6 border border-orange-200">
-                      <div className="flex items-center gap-3 mb-4">
-                        <Heart className="text-orange-600" size={20} />
-                        <h3 className="text-xl font-semibold text-orange-800">חיות מחמד</h3>
-                      </div>
-                      <p className="text-orange-700 mb-3">הכנסת חיות מחמד מותרת רק באישור מראש ובתשלום נוסף.</p>
-                      <ul className="text-sm text-orange-700 space-y-1">
-                        <li>• יש לדווח מראש על הבאת חיות</li>
-                        <li>• תשלום נוסף של 50 ש"ח ללילה</li>
-                        <li>• האורח אחראי לניקיון נוסף</li>
-                      </ul>
+                {/* General Rules */}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-3">
+                    <CheckCircle className="text-green-500" />
+                    כללים בסיסיים
+                  </h3>
+                  <ul className="space-y-3 text-gray-700 pl-4">
+                    <li>
+                      <span className="font-semibold">שימוש בדירה:</span> אתם מוזמנים להשתמש בכל הנתון בדירה, רק אנא
+                      הקפידו לא לגרום נזק.
+                    </li>
+                    <li>
+                      <span className="font-semibold">שמירה על השקט:</span> לאחר השעה 22:00 יש לשמור על רמת רעש מינימלית
+                      כדי לכבד את השכנים.
+                    </li>
+                    <li>
+                      <span className="font-semibold">עישון:</span> אסור לעשן (כולל סיגריות אלקטרוניות) בתוך הדירה. ניתן
+                      לעשן מחוץ לדירה באזורים המשותפים.
+                    </li>
+                    <li>
+                      <span className="font-semibold">מסיבות ואירועים:</span> חל איסור לקיים מסיבות. נשמח להמליץ לכם על
+                      מקומות בילוי מעולים באזור!
+                    </li>
+                    <li>
+                      <span className="font-semibold">ריהוט:</span> נא לא להזיז רהיטים ממקומם.
+                    </li>
+                    <li>
+                      <span className="font-semibold">מפתחות:</span> בסיום השהות, אנא החזירו את המפתחות לתיבה.
+                    </li>
+                    <li>
+                      <span className="font-semibold">ביטחון:</span> יש לוודא שדלת היציאה מהמתחם לרחוב סגורה היטב למניעת
+                      כניסת זרים.
+                    </li>
+                    <li>
+                      <span className="font-semibold">צלייה (גריל):</span> אם בדירתכם יש מרפסת, חל איסור מוחלט לעשות
+                      מנגל במרפסת.
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Fees & Penalties */}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-3">
+                    <AlertTriangle className="text-orange-500" />
+                    עמלות וקנסות
+                  </h3>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-orange-50 rounded-lg p-4 border border-orange-200">
+                      <p className="font-bold text-orange-800">צ'ק-אאוט מאוחר (ללא אישור):</p>
+                      <p className="text-lg font-mono text-orange-700">$25 לשעה</p>
+                    </div>
+                    <div className="bg-red-50 rounded-lg p-4 border border-red-200">
+                      <p className="font-bold text-red-800">עישון או אידוי בדירה:</p>
+                      <p className="text-lg font-mono text-red-700">$200 קנס</p>
+                    </div>
+                    <div className="bg-orange-50 rounded-lg p-4 border border-orange-200">
+                      <p className="font-bold text-orange-800">מפתח חסר:</p>
+                      <p className="text-lg font-mono text-orange-700">$50 להחלפה</p>
+                    </div>
+                    <div className="bg-red-50 rounded-lg p-4 border border-red-200">
+                      <p className="font-bold text-red-800">אורחים נוספים (ללא אישור):</p>
+                      <p className="text-lg font-mono text-red-700">$100 לאורח ללילה</p>
+                    </div>
+                    <div className="bg-orange-50 rounded-lg p-4 border border-orange-200">
+                      <p className="font-bold text-orange-800">ניקיון יסודי נדרש:</p>
+                      <p className="text-lg font-mono text-orange-700">$150 (לכלוך מוגזם, כתמים וכו')</p>
+                    </div>
+                    <div className="bg-red-50 rounded-lg p-4 border border-red-200">
+                      <p className="font-bold text-red-800">הפרת שעות השקט:</p>
+                      <p className="text-lg font-mono text-red-700">$100 (לאחר תלונה)</p>
                     </div>
                   </div>
+                </div>
 
-                  <div className="space-y-4">
-                    <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
-                      <div className="flex items-center gap-3 mb-4">
-                        <Volume2 className="text-blue-600" size={20} />
-                        <h3 className="text-xl font-semibold text-blue-800">רעש ושקט</h3>
-                      </div>
-                      <p className="text-blue-700 mb-3">שעות השקט: 22:00-08:00. אנא שמרו על רמת רעש נמוכה.</p>
-                      <ul className="text-sm text-blue-700 space-y-1">
-                        <li>• כבדו את השכנים</li>
-                        <li>• הימנעו ממוזיקה חזקה</li>
-                        <li>• שיחות טלפון בשקט</li>
-                      </ul>
-                    </div>
+                {/* Booking & Check-in Policies */}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-3">
+                    <Users className="text-indigo-500" />
+                    מדיניות הזמנה וצ'ק-אין
+                  </h3>
+                  <ul className="space-y-3 text-gray-700 pl-4">
+                    <li>
+                      <span className="font-semibold">גיל מינימום:</span> על מבצע ההזמנה להיות בן 21 ומעלה, או להתלוות
+                      על ידי מבוגר. הזמנות שיבוצעו על ידי קטינים יבוטלו ללא החזר.
+                    </li>
+                    <li>
+                      <span className="font-semibold">תושבים מקומיים:</span> מתבקשים ליצור עמנו קשר ולקבל אישור לפני
+                      ביצוע ההזמנה.
+                    </li>
+                    <li>
+                      <span className="font-semibold">אימות זהות:</span> רק האדם שביצע את ההזמנה רשאי לבצע צ'ק-אין.
+                    </li>
+                    <li>
+                      <span className="font-semibold">פרטי קשר:</span> יש להזין מספר טלפון תקין בעת ההזמנה. אם לא נוכל
+                      ליצור עמכם קשר לפני הצ'ק-אין, אנו שומרים את הזכות לבטל את ההזמנה ללא החזר.
+                    </li>
+                  </ul>
+                </div>
 
-                    <div className="bg-purple-50 rounded-xl p-6 border border-purple-200">
-                      <div className="flex items-center gap-3 mb-4">
-                        <Camera className="text-purple-600" size={20} />
-                        <h3 className="text-xl font-semibold text-purple-800">צילום ופרטיות</h3>
-                      </div>
-                      <p className="text-purple-700 mb-3">אנא כבדו את פרטיות השכנים ואל תצלמו לכיוון דירות אחרות.</p>
-                    </div>
-                  </div>
+                {/* VAT & Local Policies */}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-3">
+                    <Info className="text-blue-500" />
+                    מע"מ ומדיניות לתיירים
+                  </h3>
+                  <ul className="space-y-3 text-gray-700 pl-4">
+                    <li>
+                      <span className="font-semibold">אזרחי ישראל:</span> יחויבו בתוספת מע"מ של 17% כחוק.
+                    </li>
+                    <li>
+                      <span className="font-semibold">פטור ממע"מ לתיירים:</span> כדי להיות זכאים לפטור, יש לספק צילום של
+                      הדרכון ואישור כניסה (ויזה / כרטיס B2). השם במסמכים חייב להיות תואם לשם האורח הראשי בהזמנה.
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Important Notes */}
+                <div>
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-3">
+                    <Shield className="text-purple-500" />
+                    הערות חשובות
+                  </h3>
+                  <ul className="space-y-3 text-gray-700 pl-4">
+                    <li>
+                      <span className="font-semibold">התייחסות לנכס:</span> יש להתייחס לנכס בכבוד. אם יתעוררו בעיות,
+                      נעשה כמיטב יכולתנו לטפל בהן בהקדם.
+                    </li>
+                    <li>
+                      <span className="font-semibold">הפרת כללים:</span> הפרה של אחד מכללי הבית מהווה עילה לביטול מיידי
+                      של ההזמנה, ללא החזר כספי.
+                    </li>
+                    <li>
+                      <span className="font-semibold">זכות כניסה:</span> במקרה של תלונה על הנכס, אתם מאשרים לנו להיכנס
+                      לדירה כדי לפתור את הבעיה, ללא צורך באישור נוסף.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </section>
