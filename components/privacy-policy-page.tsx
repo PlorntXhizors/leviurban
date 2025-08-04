@@ -441,7 +441,7 @@ export default function PrivacyPolicyPage() {
                   </h3>
                   <ul className="space-y-3 text-gray-700 pl-4">
                     <li>
-                      <span className="font-semibold">אזרחי ישראל:</span> יחויבו בתוספת מע"מ של 17% כחוק.
+                      <span className="font-semibold">אזרחי ישראל:</span> יחויבו בתוספת מע"מ של 18% כחוק.
                     </li>
                     <li>
                       <span className="font-semibold">פטור ממע"מ לתיירים:</span> כדי להיות זכאים לפטור, יש לספק צילום של
