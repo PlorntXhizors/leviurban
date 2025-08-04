@@ -22,6 +22,7 @@ import {
   Car,
   Coffee,
   Mail,
+  XCircle,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -569,60 +570,53 @@ export default function PrivacyPolicyPage() {
 
                 <div className="space-y-6">
                   <div className="bg-yellow-50 rounded-xl p-6 border-r-4 border-yellow-400">
-                    <h3 className="text-xl font-semibold text-yellow-800 mb-4">מדיניות כללית</h3>
+                    <h3 className="text-xl font-semibold text-yellow-800 mb-4">מדיניות גמישה והוגנת</h3>
                     <p className="text-yellow-700 leading-relaxed mb-4">
-                      מדיניות הביטולים מבוססת על מה שנקבע עבור כל נכס בנפרד בפלטפורמת Airbnb. אנו מיישמים מדיניות מתונה
-                      המאזנת בין גמישות לאורחים לבין יציבות עסקית.
+                      אנו מבינים שתוכניות יכולות להשתנות. מדיניות הביטולים שלנו, המבוססת על תנאי Airbnb, נועדה להיות
+                      גמישה ככל האפשר תוך שמירה על יציבות.
                     </p>
                   </div>
 
                   <div className="grid md:grid-cols-3 gap-6">
-                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
-                      <div className="flex items-center gap-3 mb-4">
-                        <CheckCircle className="text-green-600" size={24} />
-                        <h3 className="text-xl font-semibold text-green-800">ביטול מוקדם</h3>
+                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200 text-center flex flex-col">
+                      <div className="flex-grow">
+                        <div className="p-3 bg-green-100 rounded-full w-fit mx-auto mb-4">
+                          <CheckCircle className="text-green-600" size={28} />
+                        </div>
+                        <h3 className="text-xl font-bold text-green-800 mb-2">החזר מלא</h3>
+                        <p className="text-green-700 mb-4">
+                          ביטול <span className="font-bold">עד 48 שעות</span> מרגע ההזמנה, ובתנאי שהביטול מתבצע לפחות
+                          <span className="font-bold"> 14 יום</span> לפני הצ'ק-אין.
+                        </p>
                       </div>
-                      <div className="text-center mb-4">
-                        <p className="text-3xl font-bold text-green-700">5+ ימים</p>
-                        <p className="text-sm text-green-600">לפני מועד ההגעה</p>
-                      </div>
-                      <div className="space-y-2">
-                        <p className="text-green-700 font-semibold">החזר מלא</p>
-                        <p className="text-sm text-green-600">למעט עמלות Airbnb</p>
-                        <p className="text-sm text-green-600">בהתאם למדיניות הדירה</p>
-                      </div>
+                      <p className="text-3xl font-bold text-green-700 mt-auto">100%</p>
                     </div>
 
-                    <div className="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-6 border border-red-200">
-                      <div className="flex items-center gap-3 mb-4">
-                        <AlertTriangle className="text-red-600" size={24} />
-                        <h3 className="text-xl font-semibold text-red-800">ביטול מאוחר</h3>
+                    <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-6 border border-orange-200 text-center flex flex-col">
+                      <div className="flex-grow">
+                        <div className="p-3 bg-orange-100 rounded-full w-fit mx-auto mb-4">
+                          <AlertTriangle className="text-orange-600" size={28} />
+                        </div>
+                        <h3 className="text-xl font-bold text-orange-800 mb-2">החזר חלקי</h3>
+                        <p className="text-orange-700 mb-4">
+                          ביטול <span className="font-bold">7 ימים או יותר</span> לפני מועד הצ'ק-אין (במקרים שאינם מזכים
+                          בהחזר מלא).
+                        </p>
                       </div>
-                      <div className="text-center mb-4">
-                        <p className="text-3xl font-bold text-red-700">{"<5"} ימים</p>
-                        <p className="text-sm text-red-600">לפני מועד ההגעה</p>
-                      </div>
-                      <div className="space-y-2">
-                        <p className="text-red-700 font-semibold">ללא החזר</p>
-                        <p className="text-sm text-red-600">אלא אם צוין אחרת</p>
-                        <p className="text-sm text-red-600">בעמוד ההזמנה</p>
-                      </div>
+                      <p className="text-3xl font-bold text-orange-700 mt-auto">50%</p>
                     </div>
 
-                    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200">
-                      <div className="flex items-center gap-3 mb-4">
-                        <Info className="text-blue-600" size={24} />
-                        <h3 className="text-xl font-semibold text-blue-800">מקרים חריגים</h3>
+                    <div className="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-6 border border-red-200 text-center flex flex-col">
+                      <div className="flex-grow">
+                        <div className="p-3 bg-red-100 rounded-full w-fit mx-auto mb-4">
+                          <XCircle className="text-red-600" size={28} />
+                        </div>
+                        <h3 className="text-xl font-bold text-red-800 mb-2">ללא החזר</h3>
+                        <p className="text-red-700 mb-4">
+                          ביטול <span className="font-bold">פחות מ-7 ימים</span> לפני מועד הצ'ק-אין.
+                        </p>
                       </div>
-                      <div className="text-center mb-4">
-                        <p className="text-2xl font-bold text-blue-700">בחינה</p>
-                        <p className="text-sm text-blue-600">פרטנית</p>
-                      </div>
-                      <div className="space-y-2">
-                        <p className="text-blue-700 font-semibold">נסיבות חריגות</p>
-                        <p className="text-sm text-blue-600">מצב חירום רפואי</p>
-                        <p className="text-sm text-blue-600">ביטול טיסות</p>
-                      </div>
+                      <p className="text-3xl font-bold text-red-700 mt-auto">0%</p>
                     </div>
                   </div>
 
